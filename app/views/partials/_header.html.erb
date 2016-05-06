@@ -8,6 +8,9 @@
 			<li>Arbitrados</li>
 			<li>Divulgación</li>
 			<li><%= link_to "Login", new_user_session_path %></li>
+			<%if user_signed_in? %>
+				<li><%= link_to "Registrar", new_user_registration_path %></li>
+			<%end %>
 		</ul>
 	</nav>
 </header>
