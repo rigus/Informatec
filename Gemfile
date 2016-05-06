@@ -30,6 +30,8 @@ gem "font-awesome-rails"
 gem "devise"
 
 gem "paperclip"
+gem 'materialize-sass'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
