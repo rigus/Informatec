@@ -4,7 +4,9 @@
   <strong>Titulo:</strong>
   <%= @article.titulo %>
 </p>
-
+<div class="field">
+  <%= image_tag @article.cover.url() %>
+</div>
 <p>
   <strong>Autor:</strong>
   <%= @article.autor %>
