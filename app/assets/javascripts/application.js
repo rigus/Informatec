@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var hwindow = $(window).height();
+
+$('.contenedor').css({
+  "max-height": hwindow + 'px',
+  height: hwindow + 'px',
+  background: "#EEEEEE",
+  overflow: "auto"
+});
