@@ -7,20 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header class="row middle-xs around-xs margen">
-	<div class="logo row middle-xs col-xs-3">
-		<h1>InformaTec</h1>
-	</div>
-	<nav class="col-xs-6">
-		<ul class="row margen between-xs">
-			<li>Inicio</li>
-			<li>Arbitrados</li>
-			<li>Divulgación</li>
-			<li>Login</li>
-		</ul>
-	</nav>
-</header>
+<%= render "partials/header"  %>
+
 <div class="contenedor">
+<%= render "partials/flashMessagges"  %>
 <%= yield %>
 </div>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
