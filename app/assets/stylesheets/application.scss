@@ -74,5 +74,8 @@ body{
     color: #468847;
     text-align: left;
  }
-
-@import "welcome.scss"
+i{
+	cursor: pointer;
+}
+@import "welcome.scss";
+@import "articles.scss";
