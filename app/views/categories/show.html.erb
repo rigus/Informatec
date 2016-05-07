@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>Articulos de <%= @category.nombre %> </h3>
+  <h2>Articulos de <%= @category.nombre %> </h2>
   <div class="row around-xs">
     <% @category.articles.each do |article| %>
       <%= render "partials/cardArticle", articulo: article %>
