@@ -29,3 +29,5 @@ $('.contenedor').css({
 $(document).ready(function(){
   $('.slider').slider({full_width: true});
 });
+
+$('body').find('select').addClass('browser-default');

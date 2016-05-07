@@ -82,6 +82,14 @@ body{
 i{
 	cursor: pointer;
 }
+
+.be-white{
+  padding: 1em;
+  background: white;
+}
+label, input{
+  font-size: 1em !important;
+}
 @import "welcome.scss";
 @import "articles.scss";
 @import "devise.scss";
