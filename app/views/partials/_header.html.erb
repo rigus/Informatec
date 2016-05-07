@@ -5,11 +5,13 @@
 	<div class="col-xs-6">
 		<ul class="row margen between-xs">
 			<li><%= link_to "Inicio", root_path %></li>
+			<li><%= link_to "Articulos", articles_path %></li>
 			<li>Arbitrados</li>
 			<li>Divulgación</li>
 			<li><%= link_to "Login", new_user_session_path %></li>
 			<%if user_signed_in? %>
 				<li><%= link_to "Registrar", new_user_registration_path %></li>
+				<li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
 			<%end %>
 		</ul>
 	</div>
