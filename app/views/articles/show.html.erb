@@ -18,6 +18,14 @@
 </p>
 
 <p>
+  <strong>Tipo:</strong>
+  <%= @article.tipo %>
+</p>
+<% @article.categories.each do |c| %>
+  <%= c.nombre %>
+<%end %>
+
+<p>
   <strong>Resumen:</strong>
   <%= @article.resumen %>
 </p>
