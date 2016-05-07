@@ -1,8 +1,12 @@
 <% articulo ||= "article" %>
 <div class="card">
-  <div class="card-image waves-effect waves-block waves-light">
-    <%= image_tag articulo.cover.url() %>
-  </div>
+  <%unless articulo.cover_file_name.nil?%>
+    <div class="card-image waves-effect waves-block waves-light">
+      <%= image_tag articulo.cover.url() %>
+    </div>
+  <%else%>
+    <%= render "partials/imgInformaTec" %>
+  <%end %>
   <div class="card-content">
     <span class="card-title  grey-text text-darken-4"><%= articulo.titulo %></span>
     <p>Autor: <%= articulo.autor %></p>
