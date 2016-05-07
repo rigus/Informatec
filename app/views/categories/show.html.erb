@@ -1,14 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Nombre:</strong>
-  <%= @category.nombre %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @category.color %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class="container">
+  <h3>Articulos de <%= @category.nombre %> </h3>
+  <div class="row around-xs">
+    <% @category.articles.each do |article| %>
+      <%= render "partials/cardArticle", articulo: article %>
+    <%end %>
+  </div>
+  <%= link_to 'Edit', edit_category_path(@category) %> |
+  <%= link_to 'Back', categories_path %>
+</div>
