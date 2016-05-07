@@ -1,0 +1,42 @@
+.contenedor-login{
+  height: 100%;;
+}
+.login{
+  background: white;
+  padding: 1em;
+  width: 40%;
+  .img-user{
+    div{
+      background: #EEEEEE;
+      width: 7em;
+      height: 7em;
+      border-radius: 100%;
+      i{
+        font-size: 4em;
+        color: #AAACAF;
+      }
+    }
+  }
+  h5{
+    text-align: center;
+    span{
+      font-family: 'Pacifico', cursive;
+    }
+  }
+  form{
+    label, input{
+      font-size: 1em;
+    }
+    label{
+      display: block;
+      text-align: left;
+    }
+  }
+}
+
+.btn{
+  background: #980e0e;
+}
+.btn:hover{
+  background: rgb(210, 60, 60);
+}
