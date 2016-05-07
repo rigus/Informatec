@@ -12,3 +12,20 @@
     height: 2.5em;
   }
 }
+.box{
+  [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+     position: inherit;
+     opacity: 1;
+  }
+  [type="checkbox"] + label {
+    padding-left: 0;
+    height: 0;
+    line-height: 0;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+  }
+  [type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after {
+    content: none !important;;
+  }
+}
