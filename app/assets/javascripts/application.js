@@ -25,3 +25,7 @@ $('.contenedor').css({
   background: "#EEEEEE",
   overflow: "auto"
 });
+
+$(document).ready(function(){
+  $('.slider').slider({full_width: true});
+});
