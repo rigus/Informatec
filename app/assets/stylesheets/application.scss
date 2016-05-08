@@ -43,7 +43,8 @@ h2{
   position: fixed;
   left: 3px;
   right: 3px;
-  top: 134px;
+  top: 66px;
+  z-index: 20;
 }
 /*flash*/
 
@@ -51,7 +52,8 @@ h2{
   position: fixed;
   left: 3px;
   right: 3px;
-  top: 134px;
+  top: 66px;
+  z-index: 23;
 }
 
 .alert-error {
