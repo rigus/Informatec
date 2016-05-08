@@ -6,9 +6,8 @@
 		<ul class="row margen between-xs">
 			<li><%= link_to "Inicio", root_path %></li>
 			<li><%= link_to "Articulos", articles_path %></li>
-			<%@categories.each do |category| %>
-				<li><%=link_to category.nombre, category %></li>
-			<%end %>
+
+			<li><a class='dropdown-button' href='#' data-activates='dropdown1'>Categorias</a></li>
 			<li><%= link_to "Login", new_user_session_path %></li>
 			<%if user_signed_in? %>
 				<li><%= link_to "Registrar", new_user_registration_path %></li>
@@ -17,3 +16,4 @@
 		</ul>
 	</div>
 </header>
+<%= render "partials/dropdown" %>

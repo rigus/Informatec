@@ -1,0 +1,6 @@
+<!-- Dropdown Structure -->
+<ul id='dropdown1' class='dropdown-content'>
+  <%@categories.each do |category| %>
+    <li><%=link_to category.nombre, category %></li>
+  <%end %>
+</ul>
