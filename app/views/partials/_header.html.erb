@@ -10,6 +10,7 @@
 			<li><a class='dropdown-button' href='#' data-activates='dropdown1'>Categorias</a></li>
 			<%if user_signed_in? %>
 				<li><%= link_to "Nuevo Articulo", new_article_path %></li>
+				<li><%= link_to "Lista Categorias", categories_path %></li>
 				<li><%= link_to "Editar Cuenta", edit_user_registration_path %></li>
 				<li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
 			<%else%>
