@@ -1,34 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div class="container be-white">
+  <div class="row">
+    <div class="col-md">
+      <p>
+        <strong>Titulo:</strong>
+        <%= @article.titulo %>
+      </p>
+      <%unless @article.cover_file_name.nil?%>
+        <div class="field">
+          <strong>Imagen</strong>
+          <br>
+          <%= image_tag @article.cover.url() , class:"img-show" %>
+        </div>
+      <%end %>
+      <p>
+        <strong>Autor:</strong>
+        <%= @article.autor %>
+      </p>
+      <p>
+        <strong>Link:</strong>
+        <%= @article.link %>
+      </p>
+    </div>
+    <div class="col-md">
+      <p>
+        <strong>Tipo:</strong>
+        <%= @article.tipo %>
+      </p>
+      <strong>Categoria</strong>
+      <% @article.categories.each do |c| %>
+        <%= c.nombre %>
+      <%end %>
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @article.titulo %>
-</p>
-<div class="field">
-  <%= image_tag @article.cover.url() %>
+      <p>
+        <strong>Resumen:</strong>
+        <br>
+        <%= @article.resumen %>
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'Back', articles_path %>
+
 </div>
-<p>
-  <strong>Autor:</strong>
-  <%= @article.autor %>
-</p>
-
-<p>
-  <strong>Link:</strong>
-  <%= @article.link %>
-</p>
-
-<p>
-  <strong>Tipo:</strong>
-  <%= @article.tipo %>
-</p>
-<% @article.categories.each do |c| %>
-  <%= c.nombre %>
-<%end %>
-
-<p>
-  <strong>Resumen:</strong>
-  <%= @article.resumen %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>

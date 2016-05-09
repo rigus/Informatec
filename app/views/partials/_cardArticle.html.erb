@@ -12,14 +12,14 @@
     <p>Autor: <%= articulo.autor %></p>
     <p>Tipo: <%= articulo.tipo %></p>
     <p><i class="fa fa-book activator" aria-hidden="true"> Ver resumen</i></p>
-    <p><a href="#">Enlace a: <%= articulo.titulo %></a></p>
-    <%if user_signed_in? %>
+    <p><a href="<%= articulo.link  %>" target="_blank">Enlace a: <%= articulo.titulo %></a></p>
       <div class="link row around-xs middle-xs margen">
         <%= link_to 'Ver', articulo %>
-        <%= link_to 'Editar', edit_article_path(articulo) %>
-        <%= link_to 'Eliminar', articulo, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%if user_signed_in? %>
+          <%= link_to 'Editar', edit_article_path(articulo) %>
+          <%= link_to 'Eliminar', articulo, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%end %>
       </div>
-    <%end %>
   </div>
   <div class="card-reveal">
     <div class="row around-xs">
